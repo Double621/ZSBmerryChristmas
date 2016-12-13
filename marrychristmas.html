@@ -1,0 +1,480 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>南京赛诚智慧早教</title>
+<link rel="stylesheet" href="css/m_static.css" type="text/css" />
+<link rel="stylesheet" href="css/example.css"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/rem.js?v=1"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+<style type="text/css">
+html{font-family: "Microsoft YaHei";}
+body{width:100%;background:#1EACAE;}
+.main{width:100%;max-width:7.5rem;font-size:0.28rem;margin:0 auto;overflow:hidden;}
+.main .head{width:7.5rem;height:1.9rem;background:url(images/topbg.jpg) no-repeat;background-size:7.5rem 4.6rem;padding:2.4rem 0 0.3rem 0;}
+.main .head .title{width:3rem;margin:0 auto;font-size:0.42rem;text-align:center;color:#AF6454;font-weight:bold;}
+.main .head .title p{width:4.5rem;overflow:hidden;display: block;height: 1.4rem;}
+.main .head .info{margin:0.25rem 0;text-align:center;}
+.main .head .info span{margin:0 0.2rem;color:#4b0f0f;font-size:0.28rem;}
+.main .cont{width:6.48rem;background:#1EACAE url() center 9px no-repeat;background-size:6.17rem 0.21rem;padding:0.22rem 0.3rem 0.08rem 0.3rem;margin:0 auto;}
+.xiangqing{text-align:center;font-size:0.32rem;color:#FBFC25;background-color:#0A2B3C;width:40%;margin: 0 auto;margin-bottom:0.3rem;line-height: 0.7rem;}
+.tulaila{text-align:center;font-size:0.32rem;color:#FBFC25;background-color:#0A2B3C;width:40%;margin: 0 auto;margin-top:0.3rem;line-height: 0.7rem;}
+.jigou{text-align:center;font-size:0.32rem;color:#FBFC25;background-color:#0A2B3C;width:40%;margin: 0 auto;margin-top:0.3rem;line-height: 0.7rem;}
+.baoming{text-align:center;font-size:0.32rem;color:#FBFC25;background-color:#0A2B3C;width:40%;margin: 0 auto;margin-top:0.3rem;line-height: 0.7rem;}
+.main .cont .desc{border:0.04rem solid #0A2B3C;border-radius:5px;padding-top:0.2rem;padding-bottom:0.48rem;}
+.main .cont .desc p{width:5.52rem;font-size:0.32rem;color:#FFFFFF;line-height:0.54rem;background-size:5.52rem 0.54rem;margin:0 auto;}
+.main .cont .snow1 {position: absolute;top: 5.2rem;left: 1rem;width: 0.28rem;height: 0.28rem;background: url(images/snow.png) no-repeat;background-size: cover;}
+.pic{position:relative;width:5.4rem;margin:0 auto;margin-top:0.48rem;text-align:center;padding: 0;}
+.rudolphblue {position: absolute;top: 0.4rem;left:-1.05rem;width:7.5rem;height:2.7rem;background: url(images/rudolphbluen.png) no-repeat;background-size: cover;z-index: -1;}
+.snow2 {position: absolute;top: 11.7rem;left: 5.6rem;width: 0.28rem;height: 0.28rem;background: url(images/snow.png) no-repeat;background-size: cover;}
+/*.main .cont .rudolphred {position: absolute;top: 10.5rem;left:6.3rem;width:1rem;height:1rem;background: url(images/rudolphred.png) no-repeat;background-size: cover;}*/
+.snow3 {position: absolute;top: 15.6rem;left: 6.8rem;width: 0.28rem;height: 0.28rem;background: url(images/snow.png) no-repeat;background-size: cover;}
+.snow4 {position: absolute;top: 16.7rem;left: 0.8rem;width: 0.28rem;height: 0.28rem;background: url(images/snow.png) no-repeat;background-size: cover;}
+/*.main .cont .pic .tt{position:absolute;top:-0.5rem;left:0;width:5.9rem;height:0.73rem;background:url(http://crm.yunyuer.com/zsb/web/images/xb_picbg.png) no-repeat;background-size:cover;}*/
+.main .detail{margin-top:0.3rem;}
+.main .detail .tt{height:0.6rem;line-height:0.6rem;text-align:center;font-size:0.36rem;color:#2c2d29;margin-bottom:0.4rem;}
+.main .detail ul{border:0.04rem solid #0A2B3C;border-radius:5px;padding-top:0.2rem;padding-bottom:0.42rem;}
+.main .detail ul{width:6.48rem;margin:0 auto;margin-top: 0.3rem;}
+.main .detail li{float:left;width:100%;line-height:0.5rem;padding:8px 0;font-size:0.32rem;margin-left: 0.4rem;}
+.main .detail li h3{font-weight:bold;font-size:0.32rem;font-weight:bold;float:left;color: #0A2B3C;}
+.main .detail li span{float:left;width:3.9rem;color: #FFFFFF;}
+.main .form{width:7rem;height:6rem;background:url() no-repeat;background-size:5.67rem 5.83rem;margin:0 auto;padding-top:0.3rem;}
+.main .form ul{width:6.48rem;margin:0 auto;}
+.baobaoxingming{border:0.04rem solid #0A2B3C;border-radius:5px;padding-top:0.2rem;padding-bottom:0.42rem;margin-bottom: 0.2rem;}
+.lianxifangshi{border:0.04rem solid #0A2B3C;border-radius:5px;padding-top:0.2rem;padding-bottom:0.42rem;margin-bottom: 0.2rem;}
+.baobaoshengri{border:0.04rem solid #0A2B3C;border-radius:5px;padding-top:0.2rem;padding-bottom:0.42rem;margin-bottom: 0.2rem;}
+.main .form li{height:0.8rem;line-height:0.66rem;padding:0.1rem 0.8rem 0 1.4rem;color:#2c2d2a;font-size:0.3rem;}
+.main .form label{float:left;width:1.6rem;}
+.main .form input{float:left;border:none;font-size:0.28rem;width:2.6rem;height:0.66rem;line-height:0.66rem;background-color: #1EACAE;color:#42536A;}
+.main .form input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#42536A;}
+.main .form .submit{display:block;width: 1.3rem;height: 1.3rem;background:#0A2B3C;-moz-border-radius: 50px;-webkit-border-radius: 50px;order-radius: 50px;margin:0.5rem auto 0 auto;font-size:0.28rem;text-align:center;line-height:0.42rem;float:none;color:#FBFC25;box-shadow:1px 1px 5px #000;}
+#birth{background:none;}
+</style>
+<div class="main">
+	<div class="head">
+		<table width="100%" border="0" class="title">
+		  <tr><td><p>南京赛诚智慧早教南京赛诚智慧早教南京赛诚智慧早教</p></td></tr>
+		</table>
+		<div class="info">
+			<span>2016-12-04 17:34</span><span>浏览数：12</span>
+		</div>
+	</div>
+	<div class="cont">
+		<h3 class="xiangqing">详情介绍</h3>
+		<div class="snow1"></div>
+		<div class="desc"><p>诚友教育诚心、诚意为广大师生搭建一个家教联系平台。给大家提供互动交流，信息共享的平台。欢迎光临！在http://www.zspxedu.com留言处登记。名师家教预约……深圳首届微课大赛……百度一下……点击:“更多”……深圳网络课堂……中考情景化、生活化与简单化的运用!观看!预约家教;一对一家教。<div class="rudolphred"></div></p></div>
+	</div>
+	<div class="tutu">
+	<h3 class="tulaila">图来啦~</h3>
+		<div class="snow2"></div>
+		<div class="rudolphred"></div>
+		<div class="snow3"></div>
+		<div class="pic">
+			<img src="http://img1.ciurl.cn/mupload/2016/12/04/17/631f2387e926bb584615e1821ec4ddda.jpg" width="95%"  />
+			<div class="rudolphblue"></div>
+		</div>
+	</div>
+	<div class="detail">
+		<h3 class="jigou">机构信息</h3>
+		<div class="snow4"></div>
+		<ul class="clearfix">
+			<li><h3>机构名称：</h3><span>赛诚智慧科技股份有限公司</span></li>
+			<li><h3>联系方式：</h3><span>18362987900</span></li>
+			<li><h3>机构地址：</h3><span>珠江路600号</span></li>
+		</ul>
+	</div>
+	<h3 class="baoming">我要报名</h3>
+	<div class="form">
+		<ul>
+			<li class="baobaoxingming"><label for="title">学员姓名：</label><input type="text" name="name" id="title" placeholder="请输入学员姓名" /></li>
+			<li class="lianxifangshi"><label for="mobile">手机号码：</label><input type="text" name="tel" id="mobile" placeholder="请输入联系方式" /></li>
+			<li class="baobaoshengri"><label for="birth">学员生日：</label><input type="date" name="date" id="birth" placeholder="请输入学员生日"  /></li>
+		</ul>
+		<input type="submit" class="submit" value="提交" />
+	</div>
+</div><!--/main-->
+<style>
+.popbg{display:none;position:fixed;z-index:1000;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.65);}
+.popbg .pop{display:none;position:absolute;left:50%;top:50%;margin:-2rem 0 0 -3.32rem;width:6.64rem;height:3.5rem;font-size:0.28rem;background-color:#fff;border-radius:0.1rem;}
+.popbg .pop li:first-child{width:100%;height:2.5rem;}
+.popbg .pop li:last-child{width:100%;height:1rem}
+.popbg .pop ul li:first-child{text-align:center;overflow:hidden;}
+.popbg .pop ul li:first-child div:first-child{font-weight:bold;padding:0.2rem;font-size:0.28rem;}
+.popbg .pop ul li:first-child div:nth-child(2){font-size:0.24rem;}
+.popbg .pop ul li:first-child div:nth-child(3){font-size:0.24rem;margin-top:0.12rem;font-weight:bold;}
+#auth{padding-top:0.14rem;display:inline-block;width:2.8rem;height:0.58rem;line-height:0.64rem;margin:0 auto;font-size:0.42rem;color:rgb(72,161,221);/*color:#466071;*//*text-align:left;*/background-color:#fff;border:none;text-align:center;}
+.popbg .pop ul li:last-child table{width:100%;height:100%;}
+.popbg .pop ul li:last-child table td{width:3.32rem;border: 1px solid #E6E9ED;text-align:center;font-size:0.28rem;}
+/*.popbg .pop ul li:last-child table td:first-child{color:rgb(72,161,221);color:rgb(167,199,221);}*/
+.light{color:rgb(167,199,221);}
+.deep{color:rgb(72,161,221);}
+.inputLeft{text-align:left;/*color:rgb(72,161,221);*/}
+.inputCenter{text-align:center;/*color:rgb(72,161,221);*/}
+.popbg .pop ul li:last-child table td:last-child{color:rgb(72,161,221);}
+#loading{display:none;position:fixed;z-index:1000;top:50%;left:50%;width:100%;height:100%;}
+#loading img{width:1rem;height:0.4rem;margin-left:-0.5rem;margin-top:-0.2rem;}
+.loadingGif{position:absolute;display:none;width:1rem;height:0.4rem;left:50%;top:70%;margin-left:-0.5rem;margin-top:-0.2rem;}
+.loadingGif2{position:absolute;display:none;width:1rem;height:0.4rem;left:50%;top:50%;margin-left:-0.5rem;margin-top:-0.2rem;}
+</style>
+<div id="loading">
+	<img src="images/loading.gif"/>
+</div>
+<div class="popbg" id="popbg" style="">	
+	<div class="pop" id="pop">
+		<ul>
+			<li>
+				<div>验证手机 <span style="float:right" id="pophiden">X</span></div>
+				<div>系统已发送验证码至</div>
+				<div class="codeSuccess" name="codeSuccess"></div>
+				<div class="codeInput"><input type="text" id="auth" name="auth" placeholder="请输入验证码" /></div>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td><div id="reSend">重新发送</div></td>
+						<td><div onclick="authCheck()">确认</div></td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div>
+	<img class="loadingGif" src="images/loading.gif"/>
+	<img class="loadingGif2" src="images/loading.gif" />
+</div>
+
+<link rel="stylesheet" href="css/weui.min.css">
+<style>
+.dialog{display:none;}
+.weui_dialog_title{vertical-align:middle;line-height:1rem;height:1rem;}
+</style>
+<div id="dialog" class="weui_dialog_alert dialog">
+	<div class="weui_mask" id="weui_mask"></div>
+	<div class="weui_dialog">
+		<div class=""><strong class="weui_dialog_title">错误</strong></div>
+		<div class="weui_dialog_bd"></div>
+		<div class="weui_dialog_ft">
+			<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(".weui_dialog_ft").click(function(){
+	$(".dialog").hide();
+});
+$(".close").click(function(){
+	$(".close").hide();
+});
+function setTip(ret, mess){
+	$('#loading').hide();
+	$('.loadingGif').hide();
+	$('.loadingGif2').hide();
+	if(ret == 5){
+		$(".weui_dialog_title").text("请正确填写验证码");
+		$(".weui_dialog_bd").text("");
+		$("#dialog").show();
+	}else{
+		if(ret == 0){
+			$(".weui_dialog_title").text("添加成功");
+			$(".weui_dialog_bd").text("");
+			$("#dialog").show();
+		}else{
+			if(ret == 7){
+				$(".weui_dialog_title").text(mess);
+				$(".weui_dialog_bd").text("");
+				$("#dialog").show();
+			}else{
+				$(".weui_dialog_title").text("错误");
+				$(".weui_dialog_bd").text(mess);
+				$("#dialog").show();
+			}
+		}
+	}
+}
+$("#weui_mask").click(function(e){
+	var e = e || window.event;//获取事件
+	var target = e.target || e.srcElement;
+	if(target.getAttribute("id") == "weui_mask"){
+		$("#dialog").hide();
+	}
+});
+</script>
+
+<script src="js/zepto.min.js"></script>
+<script>
+var sastate = 0;
+var show_id = '524';
+function judge(){
+	if (sastate) {
+		return false;
+	}
+
+	var title = $('#title').val();
+	if (!title) {
+		setTip(1, '请填写学员名字');
+		return false;
+	}
+	var mobile = $('#mobile').val();
+	if (!mobile) {
+		setTip(2, '请填写手机号');
+		return false;
+	}else{
+		var reg = /^\d{11}/;
+		if(!reg.test(mobile)){
+			setTip(6, '请正确填写手机号');
+			return false;
+		}
+	}
+
+	var birth = $('#birth').val();
+	if (!birth) {
+		setTip(3, '请选择学员年龄');
+		return false;
+	}	
+	sastate = 1;
+	$('#submit').val('正在提交');
+	$('#loading').show();
+	$.post('./sub/mem_add.php?t='+Math.random(), {ac:'sendauth', title:title, mobile:mobile, birth:birth, promo_id:-1, show_id:show_id}, function(data) {
+		console.log("2");
+		if (!data || !data.hasOwnProperty('ret')) {
+			console.log("3");
+			setTip(4, '系统繁忙');
+			$('#submit').val('再次提交');
+		} else {
+			if (data.ret == '1') {
+				mem_id = data.data.mem_id;
+				$(".codeSuccess[name='codeSuccess']").html('+86 '+$("#mobile").val());
+				$("#auth").val("");
+				$('#rtn_tip').html(" ");
+				$('#reSend').addClass("light");
+				$('#loading').hide();
+				$(".popbg").show();//弹窗显示，重新发送按钮浅色且没有绑定点击事件
+				$(".pop").show();
+				authSend(mobile);
+			} else {
+				$(".popbg").hide();
+				setTip(7, data.err_msg);
+				$('#submit').val('再次提交');
+			}
+		}
+		sastate = 0;
+	}, 'json');
+	
+}
+
+function authSend(mobile){
+	$("#reSend").removeClass("deep");
+	$("#reSend").addClass("light");//发送验证码前，将“重新发送”按钮变浅
+	var mobile = $('#mobile').val();
+	$.post('http://api.yunyuer.com/user/auth_send/?t='+Math.random(), {mobile:mobile, types:11}, function(data){
+		$("#popbg").show();
+	}, 'json');
+
+	setTimeout(function(){
+		$("#reSend").removeClass("light");
+		$("#reSend").addClass("deep");//验证码发送成功之后延迟2秒更改“重新发送”按钮颜色，并绑定点击事件
+		$("#reSend").one("click",authSend);//只绑定点击一次事件
+	},2000);
+}
+
+function authCheck(){
+	var auth = $('#auth').val();	
+	$('.loadingGif').show();
+	$.post('http://crm.yunyuer.com/zsb/web/part/sub/auth_check.php?t='+Math.random(), {mem_id:mem_id, auth:auth}, function(data){
+		if (!data || !data.hasOwnProperty('ret')) {
+			setTip(4, '系统繁忙');
+			$('#submit').val('再次提交');
+		} else {
+			if (data.ret == '1') {
+				setTip(0, '验证成功');
+				$('#title').val('');
+				$('#mobile').val('');
+				setTimeout("popbgHide()",3000);
+			} else {
+				setTip(5, data.err_msg);
+				$('#submit').val('再次提交');
+			}
+		}
+	}, 'json');
+}
+function popbgHide(){
+	$('#title').val('');
+	$('#mobile').val('');
+	$("#popbg").hide();
+}
+
+$(function(){
+//$("#title-img").height($("#title-img").width()*205/750);
+//$("#submitDiv").height($("#submitDiv").width()*594/750);
+	$(".submit").on("click",function(){
+		judge();
+	});
+
+	$("#pophiden").on("click",function(){
+		popbgHide();
+	});
+
+	var vm = new Vue({
+		el:"#signUp",
+		data:{
+			babyBirth:""
+		}
+	});
+	var vm1 = new Vue({
+		el:"#titleChangeDiv",
+		computed:{
+			isCenter:function(){
+				return !($("#titleChange").height()>$(".consult").height());
+			}
+		}
+	});
+	var vm2 = new Vue({
+		el:"#template1CourseTable",
+		computed:{
+			isCenter:function(){
+				console.log($("#template1CourseTd").height());
+				console.log((parseInt($(".consult2").height())+1));
+				console.log(!($("#template1CourseTd").height()>(parseInt($(".consult2").height())+1)));
+				return !($("#template1CourseTd").height()>(parseInt($(".consult2").height())+1));
+			}
+		}
+	});
+
+});
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+var share = {
+	'title': '南京赛诚智慧早教qeqeqq',
+	'content': '',
+	'pic': '',
+	'url': '',
+};
+
+function shareInit(share) {
+	wx.onMenuShareTimeline({//朋友圈
+		title: share.content,
+		link: share.url,
+		imgUrl: share.pic,
+		success: function(){
+			shareDone('timeline');
+		}
+	});
+	wx.onMenuShareAppMessage({//好友
+		title: share.title,
+		desc: share.content,
+		link: share.url,
+		imgUrl: share.pic,
+		success: function(){
+			shareDone('appmessage');
+		}
+	});
+	wx.onMenuShareQQ({//qq
+		title: share.title,
+		desc: share.content,
+		link: share.url,
+		imgUrl: share.pic,
+		success: function(){
+			shareDone('qq');
+		}
+	});
+	wx.onMenuShareWeibo({//微博
+		title: share.title,
+		desc: share.content,
+		link: share.url,
+		imgUrl: share.pic,
+		success: function(){
+			shareDone('weibo');
+		}
+	});
+	wx.onMenuShareQZone({//qq空间
+		title: share.title,
+		desc: share.content,
+		link: share.url,
+		imgUrl: share.pic,
+		success: function(){
+			shareDone('qzone');
+		}
+	});
+	wx.showMenuItems({
+		menuList: [
+			'menuItem:share:appMessage',
+			'menuItem:share:timeline',
+			'menuItem:share:qq',
+			'enuItem:share:weiboApp',
+			'menuItem:share:QZone',
+		]
+	});
+}
+
+wx.config({
+	debug: false,
+	appId: 'wxd85b4cd83dba5acc',
+	timestamp: 1481090005,
+	nonceStr: 'cJ50Q5eYsR61e3SX',
+	signature: '3da64462f8460b9fedcc8582aa7bf13a29e50e57',
+	jsApiList: [
+		'checkJsApi',
+		'onMenuShareTimeline',
+		'onMenuShareAppMessage',
+		'onMenuShareQQ',
+		'onMenuShareWeibo',
+		'hideMenuItems',
+		'showMenuItems',
+		'hideAllNonBaseMenuItem',
+		'showAllNonBaseMenuItem',
+		'translateVoice',
+		'startRecord',
+		'stopRecord',
+		'onRecordEnd',
+		'playVoice',
+		'pauseVoice',
+		'stopVoice',
+		'uploadVoice',
+		'downloadVoice',
+		'chooseImage',
+		'previewImage',
+		'uploadImage',
+		'downloadImage',
+		'getNetworkType',
+		'openLocation',
+		'getLocation',
+		'hideOptionMenu',
+		'showOptionMenu',
+		'closeWindow',
+		'scanQRCode',
+		'chooseWXPay',
+		'openProductSpecificView',
+		'addCard',
+		'chooseCard',
+		'openCard'
+	]
+});
+
+wx.ready(function () {
+	// 分享
+	wx.hideMenuItems({
+		menuList: [
+			'menuItem:share:appMessage',
+			'menuItem:share:timeline',
+			'menuItem:share:qq',
+			'enuItem:share:weiboApp',
+			'menuItem:share:facebook',
+			'menuItem:share:QZone',
+		]
+	});
+	shareInit(share);
+});
+
+wx.error(function (res) {
+});
+function shareDone(type) {
+	$.post('sub/share.php', {type:type}, function(data) {
+	}, 'json');
+}
+</script>
+</body>
+</html>
